@@ -45,6 +45,10 @@
     
     NSError *error = nil;
     BOOL isDirectory = NO;
+    
+    [[NSFileManager defaultManager] copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"film.mp4" ofType:nil] toPath:[_folderPath stringByAppendingPathComponent:@"film.mp4"] error:nil];
+
+    
     NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:_folderPath error:&error];
 
     [_subpaths addObject:@".."];
@@ -59,6 +63,7 @@
             [_files addObject:fileName];
         }
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {

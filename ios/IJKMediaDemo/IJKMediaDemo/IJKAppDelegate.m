@@ -17,6 +17,7 @@
 
 #import "IJKAppDelegate.h"
 #import "IJKDemoMainViewController.h"
+#import "ViewController.h"
 
 @implementation IJKAppDelegate
 
@@ -24,7 +25,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[IJKDemoMainViewController alloc] init]];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     
     self.viewController = navigationController;
     self.window.rootViewController = self.viewController;

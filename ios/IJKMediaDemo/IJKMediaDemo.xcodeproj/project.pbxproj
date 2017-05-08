@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31CA20061EC039E400A74D2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CA20051EC039E400A74D2E /* ViewController.m */; };
+		31CA200F1EC03A6100A74D2E /* film.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 31CA200E1EC03A6100A74D2E /* film.mp4 */; };
 		45D57D611A53233200BDD389 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D57D601A53233200BDD389 /* CoreVideo.framework */; };
 		45D57D631A53233800BDD389 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D57D621A53233800BDD389 /* VideoToolbox.framework */; };
 		546736C41E2371AE00FEE0DF /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 546736C31E2371AE00FEE0DF /* libstdc++.tbd */; };
@@ -50,6 +52,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		31CA200A1EC039E400A74D2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6D74F2918A5F94B00165BFD /* IJKMediaPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5450B0431E63EA4300568494;
+			remoteInfo = IJKMediaFrameworkWithSSL;
+		};
+		31CA200C1EC039E400A74D2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6D74F2918A5F94B00165BFD /* IJKMediaPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 31CA1FF11EC0250300A74D2E;
+			remoteInfo = ZGKit;
+		};
 		E654EAD61B6B28B100B0F2D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E6D74F2918A5F94B00165BFD /* IJKMediaPlayer.xcodeproj */;
@@ -74,6 +90,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31CA20041EC039E400A74D2E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		31CA20051EC039E400A74D2E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		31CA200E1EC03A6100A74D2E /* film.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = film.mp4; sourceTree = "<group>"; };
 		45D57D601A53233200BDD389 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		45D57D621A53233800BDD389 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		546736C31E2371AE00FEE0DF /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
@@ -180,6 +199,9 @@
 		E6903EF317EAF70200CFD954 = {
 			isa = PBXGroup;
 			children = (
+				31CA20041EC039E400A74D2E /* ViewController.h */,
+				31CA20051EC039E400A74D2E /* ViewController.m */,
+				31CA200E1EC03A6100A74D2E /* film.mp4 */,
 				E6D74F2918A5F94B00165BFD /* IJKMediaPlayer.xcodeproj */,
 				E6903EFE17EAF70200CFD954 /* Frameworks */,
 				E6903F0517EAF70200CFD954 /* IJKMediaDemo */,
@@ -274,7 +296,9 @@
 			isa = PBXGroup;
 			children = (
 				E654EAD71B6B28B100B0F2D0 /* IJKMediaFramework.framework */,
+				31CA200B1EC039E400A74D2E /* IJKMediaFrameworkWithSSL.framework */,
 				E654EAD91B6B28B100B0F2D0 /* IJKMediaFrameworkTests.xctest */,
+				31CA200D1EC039E400A74D2E /* ZGKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,6 +333,11 @@
 				CLASSPREFIX = IJK;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = bilibili;
+				TargetAttributes = {
+					E6903EFB17EAF70200CFD954 = {
+						DevelopmentTeam = 2U867F92FY;
+					};
+				};
 			};
 			buildConfigurationList = E6903EF717EAF70200CFD954 /* Build configuration list for PBXProject "IJKMediaDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -334,6 +363,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		31CA200B1EC039E400A74D2E /* IJKMediaFrameworkWithSSL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = IJKMediaFrameworkWithSSL.framework;
+			remoteRef = 31CA200A1EC039E400A74D2E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		31CA200D1EC039E400A74D2E /* ZGKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ZGKit.framework;
+			remoteRef = 31CA200C1EC039E400A74D2E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		E654EAD71B6B28B100B0F2D0 /* IJKMediaFramework.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -368,6 +411,7 @@
 				55E809F31B146DE8003E98A5 /* IJKQRCodeScanViewController.xib in Resources */,
 				55E809E61B145B55003E98A5 /* LaunchScreen.xib in Resources */,
 				E67323A81B69E6F800CB9036 /* LaunchImages.xcassets in Resources */,
+				31CA200F1EC03A6100A74D2E /* film.mp4 in Resources */,
 				55E809EB1B145BC2003E98A5 /* IJKDemoInputURLViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +429,7 @@
 				55E809E21B143C47003E98A5 /* IJKDemoMainViewController.m in Sources */,
 				E6903F1017EAF70200CFD954 /* IJKAppDelegate.m in Sources */,
 				E6F524EB1B183A0700B69DC7 /* IJKDemoSampleViewController.m in Sources */,
+				31CA20061EC039E400A74D2E /* ViewController.m in Sources */,
 				E6A9B56417EDA72C00A1A500 /* IJKMoviePlayerViewController.m in Sources */,
 				55E809F11B146C80003E98A5 /* Barcode.m in Sources */,
 				E66F8DCB17EEDD8B00354D80 /* IJKMediaControl.m in Sources */,
@@ -481,12 +526,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2U867F92FY;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IJKMediaDemo/IJKMediaDemo-Prefix.pch";
 				INFOPLIST_FILE = "IJKMediaDemo/IJKMediaDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "tv.danmaku.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.cubeTC.IJKMediaDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -501,12 +547,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2U867F92FY;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IJKMediaDemo/IJKMediaDemo-Prefix.pch";
 				INFOPLIST_FILE = "IJKMediaDemo/IJKMediaDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "tv.danmaku.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.cubeTC.IJKMediaDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
