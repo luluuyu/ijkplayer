@@ -11,6 +11,17 @@
 
 @interface ZGPlayKit : UIView
 
+typedef NS_ENUM(NSUInteger, ZGPlayKitState) {
+    ZGPlayKitStateStopped = 0,        //< Player has stopped
+    ZGPlayKitStateOpening,        //< Stream is opening
+    ZGPlayKitStateBuffering,      //< Stream is buffering
+    ZGPlayKitStateEnded,          //< Stream has ended
+    ZGPlayKitStateError,          //< Player has generated an error
+    ZGPlayKitStatePlaying,        //< Stream is playing
+    ZGPlayKitStatePaused          //< Stream is paused
+};
+
+
 - (instancetype)initWithPath:(NSString *)path;
 - (instancetype)initWithURL:(NSString *)URL;
 
@@ -53,5 +64,7 @@
 - (void)zg_setVideoAspectRatio:(NSInteger)scale;
 - (void)zg_setSpeed:(float)value;
 
+/** State Changed */
+@property (nonatomic,copy) void (^stateChanged)(ZGPlayKitState state);
 
 @end

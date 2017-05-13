@@ -52,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		31BFFF5C1EC5A461006C6881 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6D74F2918A5F94B00165BFD /* IJKMediaPlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 31CA1F6F1EC0250300A74D2E;
+			remoteInfo = ZGKit;
+		};
 		31CA200A1EC039E400A74D2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E6D74F2918A5F94B00165BFD /* IJKMediaPlayer.xcodeproj */;
@@ -317,6 +324,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				31BFFF5D1EC5A461006C6881 /* PBXTargetDependency */,
 				E654EAEF1B6B2A1500B0F2D0 /* PBXTargetDependency */,
 			);
 			name = IJKMediaDemo;
@@ -441,6 +449,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		31BFFF5D1EC5A461006C6881 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZGKit;
+			targetProxy = 31BFFF5C1EC5A461006C6881 /* PBXContainerItemProxy */;
+		};
 		E654EAEF1B6B2A1500B0F2D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IJKMediaFramework;

@@ -81,8 +81,10 @@
     // duration
     NSTimeInterval duration = self.delegatePlayer.duration;
     NSInteger intDuration = duration + 0.5;
+    self.mediaProgressSlider.minimumValue = .0f;
+
     if (intDuration > 0) {
-        self.mediaProgressSlider.maximumValue = duration;
+        self.mediaProgressSlider.maximumValue = 1.0f;
         self.totalDurationLabel.text = [NSString stringWithFormat:@"%02d:%02d", (int)(intDuration / 60), (int)(intDuration % 60)];
     } else {
         self.totalDurationLabel.text = @"--:--";

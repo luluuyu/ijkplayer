@@ -1503,35 +1503,35 @@ static int ijkff_inject_callback(void *opaque, int message, void *data, size_t d
 
 - (void)registerApplicationObservers
 {
-    [_notificationManager addObserver:self
-                             selector:@selector(audioSessionInterrupt:)
-                                 name:AVAudioSessionInterruptionNotification
-                               object:nil];
-
-    [_notificationManager addObserver:self
-                             selector:@selector(applicationWillEnterForeground)
-                                 name:UIApplicationWillEnterForegroundNotification
-                               object:nil];
-
-    [_notificationManager addObserver:self
-                             selector:@selector(applicationDidBecomeActive)
-                                 name:UIApplicationDidBecomeActiveNotification
-                               object:nil];
-
-    [_notificationManager addObserver:self
-                             selector:@selector(applicationWillResignActive)
-                                 name:UIApplicationWillResignActiveNotification
-                               object:nil];
-
-    [_notificationManager addObserver:self
-                             selector:@selector(applicationDidEnterBackground)
-                                 name:UIApplicationDidEnterBackgroundNotification
-                               object:nil];
-
-    [_notificationManager addObserver:self
-                             selector:@selector(applicationWillTerminate)
-                                 name:UIApplicationWillTerminateNotification
-                               object:nil];
+//    [_notificationManager addObserver:self
+//                             selector:@selector(audioSessionInterrupt:)
+//                                 name:AVAudioSessionInterruptionNotification
+//                               object:nil];
+//
+//    [_notificationManager addObserver:self
+//                             selector:@selector(applicationWillEnterForeground)
+//                                 name:UIApplicationWillEnterForegroundNotification
+//                               object:nil];
+//
+//    [_notificationManager addObserver:self
+//                             selector:@selector(applicationDidBecomeActive)
+//                                 name:UIApplicationDidBecomeActiveNotification
+//                               object:nil];
+//
+//    [_notificationManager addObserver:self
+//                             selector:@selector(applicationWillResignActive)
+//                                 name:UIApplicationWillResignActiveNotification
+//                               object:nil];
+//
+//    [_notificationManager addObserver:self
+//                             selector:@selector(applicationDidEnterBackground)
+//                                 name:UIApplicationDidEnterBackgroundNotification
+//                               object:nil];
+//
+//    [_notificationManager addObserver:self
+//                             selector:@selector(applicationWillTerminate)
+//                                 name:UIApplicationWillTerminateNotification
+//                               object:nil];
 }
 
 - (void)unregisterApplicationObservers

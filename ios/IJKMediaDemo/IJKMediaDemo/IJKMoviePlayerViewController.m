@@ -174,7 +174,7 @@
 
 - (IBAction)didSliderTouchUpInside
 {
-    self.player.currentPlaybackTime = self.mediaControl.mediaProgressSlider.value;
+    self.player.currentPlaybackTime = self.mediaControl.mediaProgressSlider.value * self.player.duration;
     [self.mediaControl endDragMediaSlider];
 }
 

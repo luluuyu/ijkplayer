@@ -38,11 +38,11 @@
 {
     IJKFFOptions *options = [[IJKFFOptions alloc] init];
 
-    [options setPlayerOptionIntValue:30     forKey:@"max-fps"];
+    [options setPlayerOptionIntValue:60     forKey:@"max-fps"];
     [options setPlayerOptionIntValue:0      forKey:@"framedrop"];
     [options setPlayerOptionIntValue:3      forKey:@"video-pictq-size"];
-    [options setPlayerOptionIntValue:0      forKey:@"videotoolbox"];
-    [options setPlayerOptionIntValue:960    forKey:@"videotoolbox-max-frame-width"];
+    [options setPlayerOptionIntValue:1      forKey:@"videotoolbox"];
+    [options setPlayerOptionIntValue:MAX([UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width)*2    forKey:@"videotoolbox-max-frame-width"];
 
     [options setFormatOptionIntValue:0                  forKey:@"auto_convert"];
     [options setFormatOptionIntValue:1                  forKey:@"reconnect"];

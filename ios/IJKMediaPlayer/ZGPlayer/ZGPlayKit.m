@@ -185,29 +185,27 @@
 
 - (void)moviePlayBackStateDidChange:(NSNotification*)notification
 {
-    //    MPMoviePlaybackStateStopped,
-    //    MPMoviePlaybackStatePlaying,
-    //    MPMoviePlaybackStatePaused,
-    //    MPMoviePlaybackStateInterrupted,
-    //    MPMoviePlaybackStateSeekingForward,
-    //    MPMoviePlaybackStateSeekingBackward
-    
+    ZGPlayKitState state = -1;
     switch (_player.playbackState)
     {
         case IJKMPMoviePlaybackStateStopped: {
             NSLog(@"IJKMPMoviePlayBackStateDidChange %d: stoped", (int)_player.playbackState);
+            state = ZGPlayKitStateStopped;
             break;
         }
         case IJKMPMoviePlaybackStatePlaying: {
             NSLog(@"IJKMPMoviePlayBackStateDidChange %d: playing", (int)_player.playbackState);
+            state = ZGPlayKitStatePlaying;
             break;
         }
         case IJKMPMoviePlaybackStatePaused: {
             NSLog(@"IJKMPMoviePlayBackStateDidChange %d: paused", (int)_player.playbackState);
+            state = ZGPlayKitStatePaused;
             break;
         }
         case IJKMPMoviePlaybackStateInterrupted: {
             NSLog(@"IJKMPMoviePlayBackStateDidChange %d: interrupted", (int)_player.playbackState);
+            state = ZGPlayKitStatePaused;
             break;
         }
         case IJKMPMoviePlaybackStateSeekingForward:
@@ -219,6 +217,12 @@
             NSLog(@"IJKMPMoviePlayBackStateDidChange %d: unknown", (int)_player.playbackState);
             break;
         }
+    }
+    if (self.stateChanged) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wenum-conversion"
+        self.stateChanged(state);
+#pragma clang diagnostic pop
     }
 }
 
