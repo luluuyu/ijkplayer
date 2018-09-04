@@ -61,6 +61,7 @@ LOCAL_SRC_FILES += ijkavformat/ijkioffio.c
 LOCAL_SRC_FILES += ijkavformat/ijkioandroidio.c
 LOCAL_SRC_FILES += ijkavformat/ijkioprotocol.c
 LOCAL_SRC_FILES += ijkavformat/ijkioapplication.c
+LOCAL_SRC_FILES += ijkavformat/ijkiourlhook.c
 
 LOCAL_SRC_FILES  += ijkavformat/ijkasync.c
 LOCAL_SRC_FILES  += ijkavformat/ijkurlhook.c
@@ -74,8 +75,8 @@ LOCAL_SRC_FILES += ijkavutil/ijktree.c
 LOCAL_SRC_FILES += ijkavutil/ijkfifo.c
 LOCAL_SRC_FILES += ijkavutil/ijkstl.cpp
 
-LOCAL_SHARED_LIBRARIES := ijkffmpeg ijksdl ijksoundtouch
-LOCAL_STATIC_LIBRARIES := android-ndk-profiler
+LOCAL_SHARED_LIBRARIES := ijkffmpeg ijksdl
+LOCAL_STATIC_LIBRARIES := android-ndk-profiler ijksoundtouch
 
 LOCAL_MODULE := ijkplayer
 

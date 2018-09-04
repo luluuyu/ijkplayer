@@ -1,6 +1,9 @@
-/*
- * Copyright (c) 2016 Bilibili
- * Copyright (c) 2016 Raymond Zheng <raymondzheng1412@gmail.com>
+/*****************************************************************************
+ * ijksdl_extra_log.h
+ *****************************************************************************
+ *
+ * Copyright (c) 2017 Bilibili
+ * copyright (c) 2017 Raymond Zheng <raymondzheng1412@gmail.com>
  *
  * This file is part of ijkPlayer.
  *
@@ -18,21 +21,15 @@
  * License along with ijkPlayer; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
-#ifndef IJKAVUTIL_IJKSTL_H
-#define IJKAVUTIL_IJKSTL_H
 
-#include <stdint.h>
+#ifndef IJKSDL__IJKSDL_EXTRA_LOG_H
+#define IJKSDL__IJKSDL_EXTRA_LOG_H
 
-void* ijk_map_create();
-void ijk_map_put(void *data, int64_t key, void *value);
-void* ijk_map_get(void *data, int64_t key);
-int ijk_map_remove(void *data, int64_t key);
-int ijk_map_size(void *data);
-int ijk_map_max_size(void *data);
-void* ijk_map_index_get(void *data, int index);
-void ijk_map_traversal_handle(void *data, void *parm, int (*enu)(void *parm, int64_t key, void *elem));
-int64_t ijk_map_get_min_key(void *data);
-void ijk_map_clear(void *data);
-void ijk_map_destroy(void *data);
+#ifdef __ANDROID__
+#include <android/log.h>
 
-#endif /* IJKAVUTIL_IJKSTL_H */
+void ffp_log_extra_print(int level, const char *tag, const char *fmt, ...);
+void ffp_log_extra_vprint(int level, const char *tag, const char *fmt, va_list ap);
+#endif
+
+#endif  // IJKSDL__IJKSDL_EXTRA_LOG_H
